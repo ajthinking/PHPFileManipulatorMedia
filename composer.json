@@ -1,0 +1,55 @@
+{
+    "name": "ajthinking/php-file-manipulator",
+    "type": "package",
+    "description": "Programatically edit PHP and Laravel files.",
+    "keywords": [
+        "php",
+        "laravel",
+        "ast",
+        "abstract syntax tree",
+        "php-parser"
+    ],
+    "authors": [
+        {
+            "name": "Anders Jürisoo",
+            "email": "jurisoo@hotmail.com"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+
+    },
+    "require-dev": {
+
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": [],
+            "providers": [
+                "PHPFileManipulator\\ServiceProvider"
+            ],
+            "aliases": {
+                "PHPFile": "PHPFileManipulator\\Facades\\PHPFile",
+                "LaravelFile": "PHPFileManipulator\\Facades\\LaravelFile"
+            }            
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "PHPFileManipulator\\": "src/",
+            "PHPFileManipulator\\Tests\\": "tests/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
